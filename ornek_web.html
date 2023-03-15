@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Example</title>
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+</head>
+<!--ONEMLİ NOT: bootstrap examples kısmından direkt fikir edinebilir-->
+<body>
+    <!--
+        Navbar yazdım search bar cıkan seceneklerde begendigimi kopyaladım ve sonrasında 
+        brand ve baslıkların isim degistirdim
+        class icerisinde ms-auto(margin-left) diyerek baslıkları sag tarafa cekildi
+        sonuc ekrana yansıtıldı
+    -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">WebSite-1</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hakkimizda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Egitim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">İletisim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <!--
+        carousel(fotografların kaydırılması) aratması yaptım bootstap uzerinde begendigimi
+        kopyalayarak copy paste ettim, lorem picsum dan src icin link copy aldım ve yapıstırdım
+        /id/27/1600/500 farklı id olması icin 27 verildi 1600 denldiginde buyudukce kuculuyor
+        600 ise azlatıldıgında kuculuyor buyudugunde artıyor w-100 ile sayfa tamamen kaplıyor
+    -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="https://picsum.photos/id/44/1600/600" class="d-block w-100" alt="pic-1">
+        </div>
+        <div class="carousel-item">
+        <img src="https://picsum.photos/id/13/1600/600" class="d-block w-100" alt="pic-2">
+        </div>
+        <div class="carousel-item">
+        <img src="https://picsum.photos/id/77/1600/600" class="d-block w-100" alt="pic-3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+    <!--container ve col resim hakkımda kısmını kendm olusturmus oldum-->
+    <div class="container mt-5 p-5">
+        <div class="row">
+            <div class="col-sm-6">
+                <!--
+                    w-100col 6'lık kısmın 100luk alansa 100unu kapla demektir
+                    img-thumbnail onu cerceveye al demektir rounded
+                    o alanı yuvarlaklaştırır
+                -->
+                <img class="w-100 img-thumbnail rounded" src="https://picsum.photos/id/8/600/400" alt="hak-pic">
+            </div>
+            <div class="col-sm-6">
+                <h2 style="color: rgb(45, 123, 157); margin-left: 0rem;">Hakkimizda:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>
+                    Officia nostrum in repellendus quo, possimus esse minus.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
+                        ab deserunt accusantium qui at laboriosam
+                    molestiae adipisci tempora assumenda molestias nam dignissimos quibusdam, excepturi quia!
+                </p>
+                <p>
+                    Officia nostrum in repellendus quo, possimus esse minus.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Modi ad neque delectus ullam, amet alias.
+                </p>
+                <p>
+                    Error facilis consectetur quas recusandae quis corporis commodi.
+                    Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis 
+                    dolorum enim veniam doloremque voluptatibus soluta aliquid rem quisquam asperiores.
+                </p>
+
+            </div>
+        </div>
+    
+        <!--
+            row tanımladım mt-5 margin verildi sonrasında col 4-4-4 seklinde ayırdım ve
+            yerlerine yerlestirdim imgleri
+            bootstrap search bar card yazdım begendigimi copy paste ettim
+            icini doldurdum row yaratarak resim vererek
+            container icinden devam ettirdim
+        -->
+        <div class="row mt-5">
+
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="https://picsum.photos/id/58/400/300" class="card-img-top" alt="btm-pic">
+                    <div class="card-body">
+                    <h5 class="card-title">Special-Item</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Incele</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="https://picsum.photos/id/65/400/300" class="card-img-top" alt="btm-pic">
+                    <div class="card-body">
+                    <h5 class="card-title">Special-Item</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Incele</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="https://picsum.photos/id/68/400/300" class="card-img-top" alt="btm-pic">
+                    <div class="card-body">
+                    <h5 class="card-title">Special-Item</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Incele</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!--
+            .col-sm*5>img.w-100.img-thumbnail ile istenileni yarattım;
+            bootstap 12 direkt bolunecek diye bir sey yok eger ben row altında 5 adet 
+            part verirsem bootstrap ona gore esitleme yapıyor asagıdaki gibi 5 ayrı resmi 
+            ortaladı ve esitledi 
+        -->
+        <!--
+            baslık eklendi row altı direkt, col12 diyerek hepsini kapladi
+            yanına bir sey gelmesi engellenmis oldu
+        -->
+        <div class="row mt-5">
+            <div class="col-sm-12"> 
+                <h5 style="color: rgb(45, 123, 157);">Resimler</h5>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/id/1/400/300" alt="p-1" class="w-100 img-thumbnail">
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/id/2/400/300" alt="p-2" class="w-100 img-thumbnail">
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/id/3/400/300" alt="p-3" class="w-100 img-thumbnail">
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/id/4/400/300" alt="p-4" class="w-100 img-thumbnail">
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/id/5/400/300" alt="p-5" class="w-100 img-thumbnail">
+            </div>
+        </div>
+
+    </div> <!--container burada biter boylelikle-->
+
+   
+   <!--
+        COK ONEMLİ NOT: bootstrap sitesi example yerine girdim product baslıgını sectim
+        en alta gelerek inspect incele dedim ve sonrasında footer kısmına sadece secerek 
+        divini açmadan copy paste aldım ve asagıya yapıstırdım kendi footer ım olarak
+    -->
+   <!--
+    arka plan dark yazi white olamsını istedim ve div icine aldım tum footerı ve class ile 
+    atama yaptım
+    -->
+    <div class="bg-dark text-white">
+        <footer class="container py-5 mt-5">
+            <div class="row">
+            <div class="col-12 col-md">
+                <h5>KK ADAY OLMASIN:</h5>
+                <small class="d-block mb-3 text-muted">© 2017–2021</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Cool stuff</a></li>
+                <li><a class="link-secondary" href="#">Random feature</a></li>
+                <li><a class="link-secondary" href="#">Team feature</a></li>
+                <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+                <li><a class="link-secondary" href="#">Another one</a></li>
+                <li><a class="link-secondary" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Resource name</a></li>
+                <li><a class="link-secondary" href="#">Resource</a></li>
+                <li><a class="link-secondary" href="#">Another resource</a></li>
+                <li><a class="link-secondary" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Business</a></li>
+                <li><a class="link-secondary" href="#">Education</a></li>
+                <li><a class="link-secondary" href="#">Government</a></li>
+                <li><a class="link-secondary" href="#">Gaming</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Team</a></li>
+                <li><a class="link-secondary" href="#">Locations</a></li>
+                <li><a class="link-secondary" href="#">Privacy</a></li>
+                <li><a class="link-secondary" href="#">Terms</a></li>
+                </ul>
+            </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+   
+
+
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
